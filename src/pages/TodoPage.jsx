@@ -1,13 +1,13 @@
 import React from 'react';
 import Axios from 'axios'
-import "./styles.css"
+import "../styles.css"
 import "bootstrap/dist/css/bootstrap.css"
-import TodoItem from './components/Todoitems';
+import TodoItem from '../components/Todoitems';
 
 
 
 
-class App extends React.Component {
+class TodoPage extends React.Component {
     state = {
       todoList : [],
       inputTodo : "",
@@ -90,18 +90,19 @@ class App extends React.Component {
     render(){
       // alert("RENDER")
     return (
-      <div>
-     <h1>Todo List</h1>
+      <div className="container mt-3">
      <button onClick={this.fetchTodo} className ="btn btn-info">Get My Todo List</button>
      {this.renderTodoList()}
-     <div>
+     <div className="mt-3">
        <input onChange={this.inputHandler} type="text" className="mx-3" />
-       <button onClick={this.addTodo} className="btn btn-primary"> Add Todo</button>
+       <button onClick={this.addTodo} className="btn btn-primary">
+        Add Todo
+        </button>
      </div>
       </div>
     );
     }
   }
   
-  export default App;
+  export default TodoPage;
   
