@@ -3,7 +3,7 @@ import Axios from 'axios'
 import "../styles.css"
 import "bootstrap/dist/css/bootstrap.css"
 import TodoItem from '../components/Todoitems';
-
+import { connect } from 'react-redux'
 
 
 
@@ -103,6 +103,10 @@ class TodoPage extends React.Component {
     );
     }
   }
-  
+  const mapStateToProps = (state)=>{
+    return{
+      testingProps :0,
+    }
+  }
   export default TodoPage;
   
