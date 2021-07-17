@@ -1,19 +1,19 @@
 {
   "todo": [
     {
-      "activity": "sekolah",
+      "activity": "MAKAN",
+      "isFinish": false,
+      "id": 1
+    },
+    {
+      "activity": "MANDI",
+      "isFinish": false,
+      "id": 2
+    },
+    {
+      "activity": "CODE",
       "isFinish": true,
       "id": 3
-    },
-    {
-      "activity": "mandi",
-      "isFinish": true,
-      "id": 4
-    },
-    {
-      "activity": "design",
-      "isFinish": false,
-      "id": 5
     }
   ]
 }

@@ -4,11 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import rootReducer from './redux/reducers'
+import ReduxThunk from  'redux-thunk'
 
 
-const store = createStore(rootReducer)
+const thunk = store =>{
+  return next=>{
+    return action =>{
+      if (typeof action == "function"){
+        return action(store.dispatch)
+      }
+      return next(action)
+      
+    }
+  }
+
+}
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk))
 
 
 ReactDOM.render(
